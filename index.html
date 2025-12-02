@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abogados Plus - Soluciones Jurídicas a Tu Alcance</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header / Navbar -->
+    <header class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <span class="logo-text">Abogados</span>
+                    <span class="logo-plus">Plus</span>
+                </div>
+                <nav class="nav-menu" id="navMenu">
+                    <a href="#inicio" class="nav-link">Inicio</a>
+                    <a href="#servicios" class="nav-link">Servicios</a>
+                    <a href="#nosotros" class="nav-link">Nosotros</a>
+                    <a href="#equipo" class="nav-link">Equipo</a>
+                    <a href="#testimonios" class="nav-link">Testimonios</a>
+                    <a href="#contacto" class="nav-link">Contacto</a>
+                </nav>
+                <button class="btn-contact-nav" onclick="document.getElementById('contacto').scrollIntoView({behavior: 'smooth'})">
+                    Solicitar Asesoría
+                </button>
+                <button class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title fade-in">Soluciones Jurídicas a Tu Alcance</h1>
+            <p class="hero-subtitle fade-in-delay">Expertos en derecho con más de 20 años de experiencia protegiendo tus intereses</p>
+            <button class="btn-hero fade-in-delay-2" onclick="document.getElementById('contacto').scrollIntoView({behavior: 'smooth'})">
+                Solicitar Asesoría Gratuita
+            </button>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse"></div>
+        </div>
+    </section>
+
+    <!-- Servicios Section -->
+    <section id="servicios" class="services">
+        <div class="container">
+            <h2 class="section-title">Nuestros Servicios Jurídicos</h2>
+            <p class="section-subtitle">Ofrecemos asesoría legal especializada en diversas áreas del derecho</p>
+            <div class="services-grid">
+                <div class="service-card reveal">
+                    <div class="service-header">
+                        <div class="service-icon">⚖️</div>
+                        <h3>Derecho Civil</h3>
+                    </div>
+                    <p class="service-description">Se encarga de regular todos los aspectos fundamentales de la vida de las personas: desde su concepción y nacimiento, su registro como ciudadanos, el matrimonio y, finalmente, su fallecimiento. También abarca todas las formas de organización familiar y social.</p>
+                    <button class="service-toggle" aria-label="Ver lista detallada de servicios">
+                        <span class="toggle-text">Ver servicios detallados</span>
+                        <span class="toggle-icon">+</span>
+                    </button>
+                    <div class="service-details">
+                        <p class="service-subtitle">Dentro de esta área, brindamos asesoría y representación en procesos como:</p>
+                        <ul class="service-list">
+                            <li>Sucesiones y distribución de herencias</li>
+                            <li>Filiación y determinación de vínculos familiares</li>
+                            <li>Divorcios y disolución del vínculo matrimonial</li>
+                            <li>Demandas de alimentos, aumento o exoneración de cuota alimentaria</li>
+                            <li>Asuntos relacionados con la patria potestad y responsabilidad parental</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-header">
+                        <div class="service-icon">💼</div>
+                        <h3>Derecho Laboral</h3>
+                    </div>
+                    <p class="service-description">En esta área atendemos todo tipo de situaciones relacionadas con la relación entre empleadores y trabajadores.</p>
+                    <button class="service-toggle" aria-label="Ver lista detallada de servicios">
+                        <span class="toggle-text">Ver servicios detallados</span>
+                        <span class="toggle-icon">+</span>
+                    </button>
+                    <div class="service-details">
+                        <p class="service-subtitle">Ofrecemos acompañamiento en:</p>
+                        <ul class="service-list">
+                            <li>Demandas por despido injustificado</li>
+                            <li>Solicitudes de reintegro cuando el retiro del trabajador no tuvo una causa válida</li>
+                            <li>Reclamos por pago de horas extras pendientes</li>
+                            <li>Pago de recargos nocturnos, dominicales y festivos</li>
+                            <li>Cobro de cesantías, vacaciones y dotaciones no entregadas</li>
+                            <li>Asesoría en la elaboración y revisión de contratos laborales</li>
+                            <li>Todo lo relacionado con prestaciones sociales, afiliaciones y garantías en el servicio de salud</li>
+                            <li>Casos de accidentes laborales y reclamaciones ante riesgos laborales</li>
+                            <li>Defensa de los empleadores que son demandados por los trabajadores</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-header">
+                        <div class="service-icon">⛏️</div>
+                        <h3>Derecho Minero</h3>
+                    </div>
+                    <p class="service-description">Brindamos asesoría y representación en casos relacionados con actividades mineras y las obligaciones de los empleadores del sector.</p>
+                    <button class="service-toggle" aria-label="Ver lista detallada de servicios">
+                        <span class="toggle-text">Ver servicios detallados</span>
+                        <span class="toggle-icon">+</span>
+                    </button>
+                    <div class="service-details">
+                        <p class="service-subtitle">Atendemos situaciones como:</p>
+                        <ul class="service-list">
+                            <li>Demandas contra empleadores propietarios de minas para exigir el pago de los derechos laborales de los trabajadores, ya sea por despido o por accidentes de trabajo</li>
+                            <li>Reclamos para el reconocimiento de pensión de invalidez cuando el empleador no afilió al trabajador a una ARL</li>
+                            <li>Acompañamiento en trámites para la obtención de títulos mineros, incluyendo procesos de adjudicación, exploración y explotación</li>
+                            <li>Asesoría en todo lo relacionado con la vinculación laboral de los trabajadores del sector minero y sus reglamentos internos de trabajo</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-header">
+                        <div class="service-icon">🏛️</div>
+                        <h3>Derecho Administrativo</h3>
+                    </div>
+                    <p class="service-description">Ofrecemos asesoría y representación en todos los trámites y acciones legales relacionados con la protección de los derechos de los ciudadanos frente a las entidades públicas.</p>
+                    <button class="service-toggle" aria-label="Ver lista detallada de servicios">
+                        <span class="toggle-text">Ver servicios detallados</span>
+                        <span class="toggle-icon">+</span>
+                    </button>
+                    <div class="service-details">
+                        <p class="service-subtitle">Entre nuestros servicios se encuentran:</p>
+                        <ul class="service-list">
+                            <li>Elaboración y presentación de derechos de petición</li>
+                            <li>Acciones de tutela para la protección inmediata de derechos fundamentales</li>
+                            <li>Acciones populares y acciones de cumplimiento</li>
+                            <li>Demandas contra la Nación, especialmente en procesos de reparación directa</li>
+                            <li>Demandas de nulidad y restablecimiento del derecho</li>
+                            <li>Trámites y demandas para el reconocimiento de pensiones por invalidez del trabajador</li>
+                            <li>Gestionamos el reconocimiento de pensiones para hijos inválidos de pensionados, así como para hijos menores o inválidos de miembros de la Fuerza Pública</li>
+                            <li>Acompañamiento en el reconocimiento de pensiones para viudas, ya sea como esposas legítimas o como compañeras permanentes, y también para compañeros permanentes cuando corresponde</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Por qué elegirnos Section -->
+    <section id="nosotros" class="why-us">
+        <div class="container">
+            <h2 class="section-title">Por Qué Elegirnos</h2>
+            <div class="why-us-content">
+                <div class="stats-grid">
+                    <div class="stat-card reveal">
+                        <div class="stat-number" data-target="20">0</div>
+                        <div class="stat-label">Años de Experiencia</div>
+                    </div>
+                    <div class="stat-card reveal">
+                        <div class="stat-number" data-target="500">0</div>
+                        <div class="stat-label">Casos Exitosos</div>
+                    </div>
+                    <div class="stat-card reveal">
+                        <div class="stat-number" data-target="98">0</div>
+                        <div class="stat-label">% Tasa de Éxito</div>
+                    </div>
+                    <div class="stat-card reveal">
+                        <div class="stat-number" data-target="15">0</div>
+                        <div class="stat-label">Abogados Especializados</div>
+                    </div>
+                </div>
+                <div class="features-list">
+                    <div class="feature-item reveal">
+                        <div class="feature-icon">✓</div>
+                        <div class="feature-content">
+                            <h3>Experiencia Comprobada</h3>
+                            <p>Más de dos décadas resolviendo casos complejos con éxito.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item reveal">
+                        <div class="feature-icon">✓</div>
+                        <div class="feature-content">
+                            <h3>Atención Personalizada</h3>
+                            <p>Cada cliente recibe atención dedicada y estrategias a medida.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item reveal">
+                        <div class="feature-icon">✓</div>
+                        <div class="feature-content">
+                            <h3>Transparencia Total</h3>
+                            <p>Comunicación clara y honesta en cada etapa del proceso.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item reveal">
+                        <div class="feature-icon">✓</div>
+                        <div class="feature-content">
+                            <h3>Tecnología Avanzada</h3>
+                            <p>Utilizamos las herramientas más modernas para tu caso.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipo Section -->
+    <section id="equipo" class="team">
+        <div class="container">
+            <h2 class="section-title">Nuestro Equipo</h2>
+            <p class="section-subtitle">Profesionales altamente capacitados en diversas áreas del derecho</p>
+            <div class="team-grid">
+                <div class="team-card reveal">
+                    <div class="team-card-inner">
+                        <div class="team-card-front">
+                            <div class="team-image">
+                                <img src="https://www.lanacion.com.ar/resizer/v2/luis-ovsejevich-gestor-cultural-abogado-y-creador-WHMGR4EQ5JC7PF62SB66V6OTEA.jpg?auth=ebe8446e7bdb8a8efb9c35c664adb4db6b48ece610dde46e208c837b836bc328&width=880&height=586&quality=70&smart=false&focal=930,347" alt="Dr. José Cuadros Suarez">
+                            </div>
+                            <h3>Dr. José Cuadros Suarez</h3>
+                            <p class="team-role">Socio Fundador</p>
+                        </div>
+                        <div class="team-card-back">
+                            <h3>Dr. José Cuadros Suarez</h3>
+                            <div class="team-specialty">Derecho Administrativo, derecho de familia y derecho laboral. 25 años de experiencia.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-card reveal">
+                    <div class="team-card-inner">
+                        <div class="team-card-front">
+                            <div class="team-image">
+                                <img src="https://lacomarcanoticias.com/wp-content/uploads/2020/03/FEL0140-ok02.jpg" alt="Dra. María González">
+                            </div>
+                            <h3>Dr. Luis Domingo Parada Sanguino</h3>
+                            <p class="team-role">Socio Senior</p>
+                        </div>
+                        <div class="team-card-back">
+                            <h3>Dr. Luis Domingo Parada Sanguino</h3>
+                            <p>Especialista en riesgo y daño. Presta servicio de derecho cívil y comercial.</p>
+                            <div class="team-specialty">Derecho Familia</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-card reveal">
+                    <div class="team-card-inner">
+                        <div class="team-card-front">
+                            <div class="team-image">
+                                <img src="https://elfrente.com.co/content/images/size/w2000/format/webp/2024/11/campo.jpg" alt="Dr. Roberto Silva">
+                            </div>
+                            <h3>Dr. Campo Elías</h3>
+                            <p class="team-role">Socio Senior</p>
+                        </div>
+                        <div class="team-card-back">
+                            <h3>Dr. Campo Elías</h3>
+                            <p>Especialista en la creación de páginas web.</p>
+                            <div class="team-specialty">Desarrollador</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-card reveal">
+                    <div class="team-card-inner">
+                        <div class="team-card-front">
+                            <div class="team-image">
+                                <img src="https://media.licdn.com/dms/image/C4D03AQEyHxboAo8irQ/profile-displayphoto-shrink_800_800/0/1517491642809?e=2147483647&v=beta&t=98nNtBMZQtq15HzUnFHrpAYpEtiAmCgKxajlthlwFh8" alt="Dra. Ana Martínez">
+                            </div>
+                            <h3>Dr. Guillermo Díaz Uribe</h3>
+                            <p class="team-role">Socio Senior</p>
+                        </div>
+                        <div class="team-card-back">
+                            <h3>Dr. Guillermo Díaz Uribe</h3>
+                            <p>Experto en análista de la IA .</p>
+                            <div class="team-specialty">Derecho Fiscal</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios Section -->
+    <section id="testimonios" class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Lo Que Dicen Nuestros Clientes</h2>
+            <div class="testimonial-carousel">
+                <div class="testimonial-track" id="testimonialTrack">
+                    <div class="testimonial-slide active">
+                        <div class="testimonial-content">
+                            <div class="testimonial-quote">"</div>
+                            <p class="testimonial-text">Excelente servicio profesional. El equipo de Abogados Plus resolvió mi caso de manera eficiente y siempre estuvieron disponibles para responder mis dudas.</p>
+                            <div class="testimonial-author">
+                                <div class="testimonial-name">Juan Pérez</div>
+                                <div class="testimonial-role">Empresario</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-slide">
+                        <div class="testimonial-content">
+                            <div class="testimonial-quote">"</div>
+                            <p class="testimonial-text">Profesionales de primer nivel. Me ayudaron en un proceso de divorcio complejo con gran sensibilidad y profesionalismo. Altamente recomendados.</p>
+                            <div class="testimonial-author">
+                                <div class="testimonial-name">Laura Sánchez</div>
+                                <div class="testimonial-role">Cliente</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-slide">
+                        <div class="testimonial-content">
+                            <div class="testimonial-quote">"</div>
+                            <p class="testimonial-text">Gracias a Abogados Plus pude resolver un conflicto laboral que parecía imposible. Su experiencia y dedicación hicieron la diferencia.</p>
+                            <div class="testimonial-author">
+                                <div class="testimonial-name">Miguel Torres</div>
+                                <div class="testimonial-role">Ejecutivo</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-controls">
+                    <button class="testimonial-btn prev" id="prevBtn">‹</button>
+                    <div class="testimonial-dots">
+                        <span class="dot active" data-slide="0"></span>
+                        <span class="dot" data-slide="1"></span>
+                        <span class="dot" data-slide="2"></span>
+                    </div>
+                    <button class="testimonial-btn next" id="nextBtn">›</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto Section -->
+    <section id="contacto" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contáctanos</h2>
+            <p class="section-subtitle">Estamos aquí para ayudarte. Solicita una consulta gratuita</p>
+            <div class="contact-wrapper">
+                <div class="contact-info reveal">
+                    <h3>Información de Contacto</h3>
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <h4>Dirección</h4>
+                            <p>Av. Principal 123, Piso 15<br>Ciudad, CP 12345</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div>
+                            <h4>Teléfono</h4>
+                            <p>+52 (55) 1234-5678</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>contacto@abogadosplus.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">🕒</div>
+                        <div>
+                            <h4>Horario</h4>
+                            <p>Lun - Vie: 9:00 AM - 7:00 PM<br>Sáb: 9:00 AM - 2:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form reveal" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required>
+                        <span class="error-message" id="nombreError"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
+                        <span class="error-message" id="emailError"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="telefono" name="telefono" placeholder="Teléfono" required>
+                        <span class="error-message" id="telefonoError"></span>
+                    </div>
+                    <div class="form-group">
+                        <select id="servicio" name="servicio" required>
+                            <option value="">Selecciona un servicio</option>
+                            <option value="civil">Derecho Civil</option>
+                            <option value="laboral">Derecho Laboral</option>
+                            <option value="minero">Derecho Minero</option>
+                            <option value="administrativo">Derecho Administrativo</option>
+                        </select>
+                        <span class="error-message" id="servicioError"></span>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="mensaje" name="mensaje" rows="5" placeholder="Cuéntanos sobre tu caso" required></textarea>
+                        <span class="error-message" id="mensajeError"></span>
+                    </div>
+                    <button type="submit" class="btn-submit">Enviar Solicitud</button>
+                    <div class="form-success" id="formSuccess"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <span class="logo-text">Abogados</span>
+                        <span class="logo-plus">Plus</span>
+                    </div>
+                    <p>Soluciones jurídicas profesionales con más de 20 años de experiencia protegiendo tus intereses.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook">📘</a>
+                        <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">💼</a>
+                        <a href="#" class="social-link" aria-label="Instagram">📷</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul class="footer-links">
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#nosotros">Nosotros</a></li>
+                        <li><a href="#equipo">Equipo</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Servicios</h4>
+                    <ul class="footer-links">
+                        <li><a href="#servicios">Derecho Civil</a></li>
+                        <li><a href="#servicios">Derecho Laboral</a></li>
+                        <li><a href="#servicios">Derecho Minero</a></li>
+                        <li><a href="#servicios">Derecho Administrativo</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <ul class="footer-contact">
+                        <li>📍 Av. Principal 123, Piso 15</li>
+                        <li>📞 +52 (55) 1234-5678</li>
+                        <li>✉️ contacto@abogadosplus.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Abogados Plus. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
