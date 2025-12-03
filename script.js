@@ -312,7 +312,7 @@ mensajeInput.addEventListener('input', () => {
 });
 
 // Manejo del envío del formulario
-contactForm.addEventListener('submit', (e) => {
+contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     
     // Validar todos los campos
@@ -323,25 +323,72 @@ contactForm.addEventListener('submit', (e) => {
     const isMensajeValid = validateMensaje();
     
     if (isNombreValid && isEmailValid && isTelefonoValid && isServicioValid && isMensajeValid) {
-        // Simular envío exitoso
-        formSuccess.textContent = '¡Gracias! Tu solicitud ha sido enviada. Nos pondremos en contacto contigo pronto.';
-        formSuccess.classList.add('show');
+        // Deshabilitar el botón de envío
+        const submitBtn = contactForm.querySelector('.btn-submit');
+        const originalBtnText = submitBtn.textContent;
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Enviando...';
         
-        // Limpiar formulario
-        contactForm.reset();
+        // Preparar los datos del formulario
+        const formData = new FormData(contactForm);
         
-        // Limpiar estilos de validación
-        [nombreInput, emailInput, telefonoInput, servicioInput, mensajeInput].forEach(input => {
-            input.style.borderColor = '';
-        });
-        
-        // Ocultar mensaje de éxito después de 5 segundos
-        setTimeout(() => {
-            formSuccess.classList.remove('show');
-        }, 5000);
-        
-        // Scroll suave al mensaje de éxito
-        formSuccess.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        try {
+            // Enviar a Formspree
+            const response = await fetch('https://formspree.io/f/myzrjlly', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+            
+            if (response.ok) {
+                // Éxito
+                formSuccess.textContent = '¡Gracias! Tu solicitud ha sido enviada exitosamente. Nos pondremos en contacto contigo pronto.';
+                formSuccess.classList.add('show');
+                
+                // Limpiar formulario
+                contactForm.reset();
+                
+                // Limpiar estilos de validación
+                [nombreInput, emailInput, telefonoInput, servicioInput, mensajeInput].forEach(input => {
+                    input.style.borderColor = '';
+                });
+                
+                // Ocultar mensaje de éxito después de 5 segundos
+                setTimeout(() => {
+                    formSuccess.classList.remove('show');
+                }, 5000);
+                
+                // Scroll suave al mensaje de éxito
+                formSuccess.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            } else {
+                // Error del servidor
+                const data = await response.json();
+                formSuccess.textContent = 'Hubo un error al enviar tu solicitud. Por favor, intenta nuevamente.';
+                formSuccess.style.background = '#e74c3c';
+                formSuccess.classList.add('show');
+                
+                setTimeout(() => {
+                    formSuccess.classList.remove('show');
+                    formSuccess.style.background = '#2ecc71';
+                }, 5000);
+            }
+        } catch (error) {
+            // Error de red
+            formSuccess.textContent = 'Error de conexión. Por favor, verifica tu conexión a internet e intenta nuevamente.';
+            formSuccess.style.background = '#e74c3c';
+            formSuccess.classList.add('show');
+            
+            setTimeout(() => {
+                formSuccess.classList.remove('show');
+                formSuccess.style.background = '#2ecc71';
+            }, 5000);
+        } finally {
+            // Rehabilitar el botón
+            submitBtn.disabled = false;
+            submitBtn.textContent = originalBtnText;
+        }
     } else {
         // Scroll al primer campo con error
         const firstError = contactForm.querySelector('.error-message:not(:empty)');
